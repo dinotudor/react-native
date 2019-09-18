@@ -26,6 +26,8 @@ export default class Main extends Component {
             placeholder="Add user"
             value={newUser}
             onChangeText={text => this.setState({ newUser: text })}
+            returnKeyType="send"
+            onSubmitEditing={this.handleAddUser}
           />
           <Submit onPress={this.handleAddUser}>
             <Icon name="add" size={20} color="#FFF" />
