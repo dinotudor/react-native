@@ -11,7 +11,7 @@ import {
   List,
   User,
   Avatar,
-  name,
+  Name,
   Bio,
   ProfileButton,
   ProfileButtonText,
@@ -32,7 +32,7 @@ export default class Main extends Component {
       name: response.data.name,
       login: response.data.login,
       bio: response.data.bio,
-      avatar: response.data.avatar,
+      avatar: response.data.avatar_url,
     };
 
     this.setState({
@@ -67,9 +67,10 @@ export default class Main extends Component {
           keyExtractor={user => user.login}
           renderItem={({ item }) => (
             <User>
-              <Avatar src={{ uri: item.avatar }} />
+              <Avatar source={{ uri: item.avatar }} />
               <Name>{item.name}</Name>
               <Bio>{item.bio}</Bio>
+
               <ProfileButton onPress={() => {}}>
                 <ProfileButtonText>See profile</ProfileButtonText>
               </ProfileButton>
