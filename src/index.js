@@ -1,13 +1,7 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
-const App = () => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>React Native Project</Text>
-    </View>
-  );
-};
+import './config/ReactotronConfig';
 
 const styles = StyleSheet.create({
   container: {
@@ -21,4 +15,10 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>React Native Project</Text>
+    </View>
+  );
+}
